@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plain Light';
+    color: #fff;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+#loader{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 999;
+    background-color: #0B0B0B;
+    padding: 10vw 25vh;
+}
+
+.text{
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3vw;
+}
+
+#text-num{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+
+#text-num h5, #text-num h6{
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: 'silk serif';
+}
+
+#text-num h5{
+    text-align: right;
+    width: 5vw;
+}
+
+.text h1{
+    font-size: 6.5vw;
+    text-transform: uppercase;
+}
+
+.text h2{
+    font-size: 5vw;
+    text-transform: uppercase;
+    /* animation-name: textChange; */
+    opacity: 0;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes textChange {
+    0%{
+        font-family: 'Plain Light';
+        -webkit-text-stroke: 1px #fff;
+        color: #fff;
+        font-weight: 500;
+        opacity: 1;
+    }
+    48%{
+        font-family: 'Plain Light';
+        -webkit-text-stroke: 1px #fff;
+        color: #fff;
+        font-weight: 500;
+        opacity: 0;
+    }
+    50%{
+        font-family: 'silk serif';
+        color: transparent;
+        -webkit-text-stroke: 1px #fff;
+        font-weight: 500;
+        opacity: 1;
+    }
+    100%{
+        font-family: 'silk serif';
+        color: transparent;
+        -webkit-text-stroke: 1px #fff;
+        font-weight: 500;
+        opacity: 0;
+    }
+}
+
+#main{
+    position: relative;
+    background-color: #111;
+}
+
+#page1{
+    width: 100%;
+    height: 100vh;
+    background-color: #151515;
+}
